@@ -14,14 +14,16 @@ Summary: An R interface to the Lawson-Hanson implementation of an algorithm for 
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-nnls-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-nnls-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-nnls-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-nnls-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-nnls-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-nnls-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-nnls-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-nnls-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-nnls-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-nnls-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-nnls-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-nnls-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-nnls/badges/version.svg)](https://anaconda.org/conda-forge/r-nnls)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-nnls/badges/downloads.svg)](https://anaconda.org/conda-forge/r-nnls)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--nnls-green.svg)](https://anaconda.org/conda-forge/r-nnls) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-nnls.svg)](https://anaconda.org/conda-forge/r-nnls) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-nnls.svg)](https://anaconda.org/conda-forge/r-nnls) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-nnls.svg)](https://anaconda.org/conda-forge/r-nnls) |
 
 Installing r-nnls
 =================
