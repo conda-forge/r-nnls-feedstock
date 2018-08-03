@@ -12,7 +12,6 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/nnls_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/nnls/nnls_{{ version }}.tar.gz
-
   sha256: 0e5d77abae12bc50639d34354f96a8e079408c9d7138a360743b73bd7bce6c1f
 
 build:
@@ -26,14 +25,13 @@ build:
 
 requirements:
   build:
-    - posix                # [win]
+    - posix                            # [win]
     - {{ compiler('fortran') }}        # [unix]
     - {{ compiler('m2w64_fortran') }}  # [win]
     - {{ compiler('c') }}        # [unix]
     - {{ compiler('m2w64_c') }}  # [win]
   host:
     - r-base
-
   run:
     - r-base
 
@@ -49,7 +47,7 @@ about:
     least squares (NNLS).  Also allows the combination of non-negative and non-positive
     constraints.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}\/lib\/R\/share\/licenses\/GPL-3'  # [unix]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
   license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
 extra:
    recipe-maintainers:
