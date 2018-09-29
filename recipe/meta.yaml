@@ -1,5 +1,4 @@
 {% set version = '1.4' %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,34 +9,37 @@ package:
 source:
   fn: nnls_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/nnls_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/nnls/nnls_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/nnls_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/nnls/nnls_{{ version }}.tar.gz
   sha256: 0e5d77abae12bc50639d34354f96a8e079408c9d7138a360743b73bd7bce6c1f
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 2
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - posix                            # [win]
-    - {{ compiler('fortran') }}        # [unix]
-    - {{ compiler('m2w64_fortran') }}  # [win]
-    - {{ compiler('c') }}        # [unix]
-    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('c') }}        # [not win]
+    - {{ compiler('fortran') }}  # [not win]
+    - {{native}}toolchain        # [win]
+    - {{posix}}filesystem        # [win]
+    - {{posix}}make
+    - {{posix}}sed               # [win]
+    - {{posix}}coreutils         # [win]
+    - {{posix}}zip               # [win]
   host:
     - r-base
   run:
     - r-base
+    - {{native}}gcc-libs         # [win]
 
 test:
   commands:
-    - $R -e "library('nnls')"  # [not win]
+    - $R -e "library('nnls')"           # [not win]
     - "\"%R%\" -e \"library('nnls')\""  # [win]
 
 about:
@@ -49,8 +51,9 @@ about:
   license_family: GPL3
   license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
   license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+
 extra:
-   recipe-maintainers:
+  recipe-maintainers:
     - MathiasHaudgaard
     - FrodePedersen
     - ArneKr
@@ -58,3 +61,5 @@ extra:
     - bgruening
     - daler
     - jdblischak
+    - cbrueffer
+    - dbast
