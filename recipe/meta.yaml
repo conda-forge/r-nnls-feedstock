@@ -16,7 +16,6 @@ source:
 build:
   merge_build_host: True  # [win]
   number: 1006
-  skip: true  # [win32]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -45,12 +44,12 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=nnls
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: An R interface to the Lawson-Hanson implementation of an algorithm for non-negative
     least squares (NNLS).  Also allows the combination of non-negative and non-positive
     constraints.
-  license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_family: GPL2
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
@@ -58,9 +57,3 @@ extra:
     - MathiasHaudgaard
     - FrodePedersen
     - ArneKr
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
