@@ -3,6 +3,7 @@ About r-nnls-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-nnls-feedstock/blob/main/LICENSE.txt)
 
+
 About r-nnls
 ------------
 
@@ -11,6 +12,7 @@ Home: https://CRAN.R-project.org/package=nnls
 Package license: GPL-2.0-or-later
 
 Summary: An R interface to the Lawson-Hanson implementation of an algorithm for non-negative least squares (NNLS).  Also allows the combination of non-negative and non-positive constraints.
+
 About r-nnls
 ------------
 
