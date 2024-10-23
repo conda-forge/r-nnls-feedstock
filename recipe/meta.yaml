@@ -1,4 +1,4 @@
-{% set version = "1.5" %}
+{% set version = "1.6" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/nnls_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/nnls/nnls_{{ version }}.tar.gz
-  sha256: cd70feb286f86f6dead75da693a8f67c9bd3b91eb738e6e6ac659e3b8c7a3452
+  sha256: 272f6174cfbab744486f7ec44a516cb5845663b28d38fe0b4d2a924673117fda
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
